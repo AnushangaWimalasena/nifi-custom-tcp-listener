@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.processors.TestListenTCP
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 37.913 sec <<< FAILURE! - in com.mycompany.processors.TestListenTCP
+testTLSClienAuthRequiredAndClientCertProvided(com.mycompany.processors.TestListenTCP)  Time elapsed: 11.7 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthRequiredAndClientCertProvided(TestListenTCP.java:137)
+
+testTLSClienAuthRequiredAndClientCertNotProvided(com.mycompany.processors.TestListenTCP)  Time elapsed: 11.14 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthRequiredAndClientCertNotProvided(TestListenTCP.java:169)
+
+testTLSClienAuthNoneAndClientCertNotProvided(com.mycompany.processors.TestListenTCP)  Time elapsed: 12.159 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthNoneAndClientCertNotProvided(TestListenTCP.java:198)
+

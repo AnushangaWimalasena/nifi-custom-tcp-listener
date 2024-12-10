@@ -1,0 +1,28 @@
+Port: 49476
+[pool-1-thread-1] ERROR com.mycompany.processors.ListenTCP - ListenTCP[id=acff9342-6db7-4866-a0e9-5096e871d507] Error reading from channel due to Tag mismatch: javax.net.ssl.SSLException: Tag mismatch
+testCustomValidate called successfully
+
+Port: 49478
+testListenTCP called successfully
+
+Port: 49480
+testListenTCPBatching called successfully
+
+Port: 49482
+[pool-4-thread-1] ERROR org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel - org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel@3c00f2fe Failed to connect due to javax.net.ssl.SSLHandshakeException: Empty client certificate chain
+[pool-4-thread-1] ERROR com.mycompany.processors.ListenTCP - ListenTCP[id=8eec82d1-a2bd-4870-ae22-101104bafc1d] Error reading from channel due to Empty client certificate chain: javax.net.ssl.SSLHandshakeException: Empty client certificate chain
+Port: 49484
+[pool-5-thread-1] ERROR com.mycompany.processors.ListenTCP - [ListenTCP[id=7527d26d-98aa-4e36-9af7-ecb4deb571f3]] Error reading from channel due to channel being closed
+java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:224)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:560)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:618)
+	at org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel.writeFully(SSLSocketChannel.java:355)
+	at org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel.close(SSLSocketChannel.java:457)
+	at org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel.readData(SSLSocketChannel.java:312)
+	at org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel.read(SSLSocketChannel.java:565)
+	at org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel.read(SSLSocketChannel.java:533)
+	at org.apache.nifi.processor.util.listen.handler.socket.SSLSocketChannelHandler.run(SSLSocketChannelHandler.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)

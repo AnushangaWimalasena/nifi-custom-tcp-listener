@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mycompany.processors.TestListenTCP" time="37.911" tests="6" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="22.0.1"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/22.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/anushangawimalasena/projects/java_projects/custom-tcp-listenr/my-nifi-bundle/nifi-sample-processors"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/anushangawimalasena/projects/java_projects/custom-tcp-listenr/my-nifi-bundle/nifi-sample-processors"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="22.0.1"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.io.tmpdir" value="/var/folders/7q/b_lg89gx749f588d9rxsgtxh0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.9.8/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/anushangawimalasena/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.9.8/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="66.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="14.4"/>
+    <property name="library.jansi.path" value="/opt/homebrew/Cellar/maven/3.9.8/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/anushangawimalasena"/>
+    <property name="user.timezone" value="Asia/Colombo"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="22"/>
+    <property name="user.name" value="anushangawimalasena"/>
+    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.9.8/libexec/boot/plexus-classworlds-2.8.0.jar"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/22.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.9.8/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testTLSClienAuthRequiredAndClientCertProvided" classname="com.mycompany.processors.TestListenTCP" time="11.7">
+    <failure message="expected:&lt;5&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthRequiredAndClientCertProvided(TestListenTCP.java:137)
+]]></failure>
+    <system-out><![CDATA[Port: 49476
+]]></system-out>
+    <system-err><![CDATA[[pool-1-thread-1] ERROR com.mycompany.processors.ListenTCP - ListenTCP[id=acff9342-6db7-4866-a0e9-5096e871d507] Error reading from channel due to Tag mismatch: javax.net.ssl.SSLException: Tag mismatch
+]]></system-err>
+  </testcase>
+  <testcase name="testCustomValidate" classname="com.mycompany.processors.TestListenTCP" time="0.106"/>
+  <testcase name="testListenTCP" classname="com.mycompany.processors.TestListenTCP" time="1.55"/>
+  <testcase name="testListenTCPBatching" classname="com.mycompany.processors.TestListenTCP" time="1.256"/>
+  <testcase name="testTLSClienAuthRequiredAndClientCertNotProvided" classname="com.mycompany.processors.TestListenTCP" time="11.14">
+    <failure message="expected:&lt;5&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthRequiredAndClientCertNotProvided(TestListenTCP.java:169)
+]]></failure>
+    <system-out><![CDATA[Port: 49482
+]]></system-out>
+    <system-err><![CDATA[[pool-4-thread-1] ERROR org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel - org.apache.nifi.remote.io.socket.ssl.SSLSocketChannel@3c00f2fe Failed to connect due to javax.net.ssl.SSLHandshakeException: Empty client certificate chain
+[pool-4-thread-1] ERROR com.mycompany.processors.ListenTCP - ListenTCP[id=8eec82d1-a2bd-4870-ae22-101104bafc1d] Error reading from channel due to Empty client certificate chain: javax.net.ssl.SSLHandshakeException: Empty client certificate chain
+]]></system-err>
+  </testcase>
+  <testcase name="testTLSClienAuthNoneAndClientCertNotProvided" classname="com.mycompany.processors.TestListenTCP" time="12.159">
+    <failure message="expected:&lt;5&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<5> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.mycompany.processors.TestListenTCP.runTCP(TestListenTCP.java:251)
+	at com.mycompany.processors.TestListenTCP.testTLSClienAuthNoneAndClientCertNotProvided(TestListenTCP.java:198)
+]]></failure>
+    <system-out><![CDATA[Port: 49484
+]]></system-out>
+    <system-err><![CDATA[[pool-5-thread-1] ERROR com.mycompany.processors.ListenTCP - [ListenTCP[id=7527d26d-98aa-4e36-9af7-ecb4deb571f3]] Error reading from channel due to channel being closed
+java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:224)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:560)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:618)]]></system-err>
+  </testcase>
+</testsuite>
